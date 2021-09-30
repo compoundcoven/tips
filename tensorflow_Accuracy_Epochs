@@ -1,0 +1,11 @@
+#Tensorflowで学習の様子をグラフにプロットするプログラム
+#縦軸がAccuracy, 横軸がEpochsで、ロスと正解率の推移を描画する
+
+plt.plot(range(1, epochs+1),
+         result.history['accuracy'], label="trainning")
+plt.plot(range(1, epochs+1),
+        result.history['loss'], label='loss')
+plt.xlabel('Epochs=', + str(epochs))
+plt.ylabel('Accuracy')
+plt.legend()
+plt.show()
